@@ -11,37 +11,25 @@ namespace stm32 {
 
 PinList::PinList() {}
 
-PinList::PinList(unordered_map<string, Pin> umap) {
-	setPinMap(umap);
+PinList::PinList(PinPair* map) {
+	setPinMap(map);
 }
 
-void PinList::setPinMap(unordered_map<string, Pin> umap) {
-	this->pinMap = umap;
+void PinList::setPinMap(PinPair* map) {
+	this->pinMap = map;
 }
 
-unordered_map<string, Pin> PinList::getPinMap() {
+PinPair* PinList::getPinMap() {
 	return this->pinMap;
 }
 
-//void operator =(unordered_map<string, Pin> umap); // Write Map
-
 void PinList::operator ()(string key, State s) {
-	try {
-		if(this->getPinMap().find(key) == this->getPinMap().end()) {
-			throw (key);
-		}
-		else {
-			this->getPinMap()[key] = State::Set;
-		}
-	}
-	catch (...) {
-		;	// TODO : insert key abd pin
-	}
+
 }
 
-//void operator !(); // Toggle Map.
-//void operator !=(string key); // Toggle Map with a key
-//	State operator [](string key); // Read Map for a pin
+//void PinList::operator =(PinPair* map); // Write Map
+//void PinList::operator !(); // Toggle Map.
+//void PinList::operator !=(string key); // Toggle Map with a key
 
 PinList::~PinList() {}
 
