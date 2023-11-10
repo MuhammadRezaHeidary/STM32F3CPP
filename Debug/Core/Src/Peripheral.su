@@ -1,0 +1,3 @@
+../Core/Src/Peripheral.cpp:12:1:stm32::Peripheral::Peripheral()	16	static
+../Core/Src/Peripheral.cpp:17:1:stm32::Peripheral::~Peripheral()	16	static
+../Core/Src/Peripheral.cpp:17:1:virtual stm32::Peripheral::~Peripheral()	16	static
