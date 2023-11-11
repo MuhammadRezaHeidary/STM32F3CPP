@@ -27,6 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include <Port.hpp>
 #include <Pin.hpp>
+#include <PinList.hpp>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -92,8 +93,16 @@ int main(void)
   MX_SPI1_Init();
   MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
+  stm32::Pin PA8(GPIOE, GPIO_PIN_8);
+  stm32::Pin PA9(GPIOE, GPIO_PIN_9);
+  stm32::Pin PA10(GPIOE, GPIO_PIN_10);
   stm32::Pin PA11(GPIOE, GPIO_PIN_11);
   stm32::Pin PA12(GPIOE, GPIO_PIN_12);
+  stm32::Pin PA13(GPIOE, GPIO_PIN_13);
+  stm32::Pin PA14(GPIOE, GPIO_PIN_14);
+  stm32::Pin PA15(GPIOE, GPIO_PIN_15);
+  stm32::Pin LEDs[8] = {PA8, PA9, PA10, PA11, PA12, PA13, PA14, PA15};
+  stm32::PinList LD(LEDs, sizeof LEDs / sizeof LEDs[0]);
 
   /* USER CODE END 2 */
 
@@ -104,9 +113,15 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  !PA11;
-	  a = static_cast<State>(~PA11);
+	  State s1[8] = {State::Set, State::Reset, State::Set, State::Reset, State::Set, State::Reset, State::Set, State::Reset};
+	  LD = s1;
+	  a = static_cast<State>(LD[4]);
 	  HAL_Delay(1000);
+	  State s2[8] = {State::Reset, State::Set, State::Reset, State::Set, State::Reset, State::Set, State::Reset, State::Set};
+	  LD = s2;
+	  a = static_cast<State>(LD[4]);
+	  HAL_Delay(1000);
+
   }
   /* USER CODE END 3 */
 }

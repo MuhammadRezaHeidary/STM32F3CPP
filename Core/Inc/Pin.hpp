@@ -23,6 +23,9 @@ public:
 	virtual ~Pin();
 	void setPin(uint16_t p);
 	uint16_t getPin();
+	void writePin(State pv);
+	void togglePin();
+	State readPin();
 	virtual void operator =(State pv); // Write Pin
 	virtual void operator !(); // Toggle Pin
 	State operator ~(); // Read Pin

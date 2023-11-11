@@ -22,6 +22,11 @@ public:
 	virtual ~Port();
 	void setPort(GPIO_TypeDef* p);
 	GPIO_TypeDef* getPort();
+	void writePort(uint16_t pv);
+	void togglePort();
+	void togglePin(uint16_t pv);
+	State readPin(uint8_t index);
+	uint16_t readPort();
 	virtual void operator =(uint16_t pv); // Write Port
 	virtual void operator !(); // Toggle Port
 	void operator !=(uint16_t pv); // Toggle Port with input pins

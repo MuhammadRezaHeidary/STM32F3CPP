@@ -15,27 +15,32 @@ using namespace std;
 
 namespace stm32 {
 
-typedef struct PinPair {
-	string key;
-	Pin pin;
-	static int size = 0;
-} PinPair;
-
 class PinList {
 private:
-	PinPair* pinMap;
+	Pin* pinMap;
+	int sizeMap;
 
 public:
 	PinList();
-	PinList(PinPair* map);
+	PinList(Pin* map);
+	PinList(Pin* map, int size);
 	virtual ~PinList();
-	void setPinMap(PinPair* map);
-	PinPair* getPinMap();
-	void operator =(PinPair* map); // Write Map
+	void setPinMap(Pin* map);
+	Pin* getPinMap();
+	void setSizeMap(int size);
+	int getSizeMap();
+	void writeMap(State* s);
+	void toggleMap();
+	State* readMap();
+	void writeMapWithKey(int key, State s);
+	void toggleMapWithKey(int key);
+	State readMapWithKey(int key);
+	void operator =(State* s); // Write Map
 	void operator !(); // Toggle Map.
-	void operator ()(string key, State s); // Write Map key
-	void operator !=(string key); // Toggle Map with a key
-	State operator [](string key); // Read Map for a pin
+	State* operator ~(); // Read Map
+	void operator ()(int key, State s); // Write Map key
+	void operator !=(int key); // Toggle Map with a key
+	State operator [](int key); // Read Map for a key
 };
 
 } /* namespace stm32 */

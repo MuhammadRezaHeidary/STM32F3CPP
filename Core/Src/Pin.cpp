@@ -31,7 +31,7 @@ uint16_t Pin::getPin() {
 	return this->pin;
 }
 
-void Pin::operator =(State pv) {
+void Pin::writePin(State pv) {
 	if(pv != State::Reset) {
 		this->getPort()->BSRR = (uint32_t)(this->getPin());
 	}
@@ -40,12 +40,24 @@ void Pin::operator =(State pv) {
 	}
 }
 
-void Pin::operator !() {
+void Pin::operator =(State pv) {
+	this->writePin(pv);
+}
+
+void Pin::togglePin() {
 	this->getPort()->BSRR = ((this->getPort()->ODR & this->getPin()) << GPIO_PIN_NUMBER) | (~(this->getPort()->ODR) & this->getPin());
 }
 
-State Pin::operator ~() {
+void Pin::operator !() {
+	this->togglePin();
+}
+
+State Pin::readPin() {
 	return (this->getPort()->IDR & this->getPin() ? State::Set : State::Reset);
+}
+
+State Pin::operator ~() {
+	return this->readPin();
 }
 
 Pin::~Pin() {

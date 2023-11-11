@@ -32,7 +32,8 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h \
  ../Core/Inc/i2c.h ../Core/Inc/main.h ../Core/Inc/spi.h ../Core/Inc/usb.h \
  ../Core/Inc/gpio.h ../Core/Inc/Port.hpp ../Core/Inc/GPIO_.hpp \
- ../Core/Inc/Peripheral.hpp ../Core/Inc/Electronics.h ../Core/Inc/Pin.hpp
+ ../Core/Inc/Peripheral.hpp ../Core/Inc/Electronics.h ../Core/Inc/Pin.hpp \
+ ../Core/Inc/PinList.hpp
 ../Core/Inc/main.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:
 ../Core/Inc/stm32f3xx_hal_conf.h:
@@ -75,3 +76,4 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 ../Core/Inc/Peripheral.hpp:
 ../Core/Inc/Electronics.h:
 ../Core/Inc/Pin.hpp:
+../Core/Inc/PinList.hpp:
