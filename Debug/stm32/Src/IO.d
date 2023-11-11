@@ -1,5 +1,5 @@
-Core/Src/Peripheral.o: ../Core/Src/Peripheral.cpp \
- ../Core/Inc/Peripheral.hpp ../Core/Inc/main.h \
+stm32/Src/IO.o: ../stm32/Src/IO.cpp \
+ C:/Users/muham/Files/STM32/F3Discovery_CPP/stm32/Inc/IO.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h \
  ../Core/Inc/stm32f3xx_hal_conf.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h \
@@ -31,9 +31,8 @@ Core/Src/Peripheral.o: ../Core/Src/Peripheral.cpp \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr_ex.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h \
- ../Core/Inc/Electronics.h
-../Core/Inc/Peripheral.hpp:
-../Core/Inc/main.h:
+ C:/Users/muham/Files/STM32/F3Discovery_CPP/stm32/Inc/Electronics.h
+C:/Users/muham/Files/STM32/F3Discovery_CPP/stm32/Inc/IO.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:
 ../Core/Inc/stm32f3xx_hal_conf.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:
@@ -65,4 +64,4 @@ Core/Src/Peripheral.o: ../Core/Src/Peripheral.cpp \
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr_ex.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h:
-../Core/Inc/Electronics.h:
+C:/Users/muham/Files/STM32/F3Discovery_CPP/stm32/Inc/Electronics.h:

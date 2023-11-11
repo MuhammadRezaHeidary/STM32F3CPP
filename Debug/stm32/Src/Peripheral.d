@@ -1,6 +1,6 @@
-Core/Src/Port.o: ../Core/Src/Port.cpp ../Core/Inc/Port.hpp \
- ../Core/Inc/GPIO_.hpp ../Core/Inc/Peripheral.hpp ../Core/Inc/main.h \
- ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h \
+stm32/Src/Peripheral.o: ../stm32/Src/Peripheral.cpp \
+ C:/Users/muham/Files/STM32/F3Discovery_CPP/stm32/Inc/Peripheral.hpp \
+ ../Core/Inc/main.h ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h \
  ../Core/Inc/stm32f3xx_hal_conf.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h \
@@ -31,10 +31,8 @@ Core/Src/Port.o: ../Core/Src/Port.cpp ../Core/Inc/Port.hpp \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr_ex.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h \
- ../Core/Inc/Electronics.h
-../Core/Inc/Port.hpp:
-../Core/Inc/GPIO_.hpp:
-../Core/Inc/Peripheral.hpp:
+ C:/Users/muham/Files/STM32/F3Discovery_CPP/stm32/Inc/Electronics.h
+C:/Users/muham/Files/STM32/F3Discovery_CPP/stm32/Inc/Peripheral.hpp:
 ../Core/Inc/main.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:
 ../Core/Inc/stm32f3xx_hal_conf.h:
@@ -67,4 +65,4 @@ Core/Src/Port.o: ../Core/Src/Port.cpp ../Core/Inc/Port.hpp \
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr_ex.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h:
-../Core/Inc/Electronics.h:
+C:/Users/muham/Files/STM32/F3Discovery_CPP/stm32/Inc/Electronics.h:
